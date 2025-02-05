@@ -65,8 +65,29 @@ int compararProdutos(const void *a, const void *b) {
  
  */  
  
+
+}
+int i = 0; 
  
- 
+int main() {
+
+	PROD produtos[Produtos_MAX];
+	
+	printf("Informe os Produtos e seus precos:\n");
+	
+	//Lê o nome do produto e armazena na característica nome do array produto_max 
+	printf("Nome: ");
+	scanf("%19s", produtos[i].nome); 
+	/*
+	O formato "%19s" no scanf significa que ele irá ler no máximo 19 caracteres da entrada e armazená-los 
+	na string produtos[i].nome. O motivo desse limite é evitar estouro de buffer.
+	
+	*/
+	
+	//Lê o preço do produto e armazena na característica preço do array produto_max
+	printf("Preco: ");
+	scanf("%f", &produtos[i].preco);
+
 }
 
 
