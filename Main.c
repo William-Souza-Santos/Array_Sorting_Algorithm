@@ -6,7 +6,7 @@
 
                                       WILLIAM SANTOS 
 
-Fazer um programa em "C" que leia uma lista de 20 produtos e preços e armazena-os 
+Fazer um programa em "C" que leia uma lista de 10 produtos e preços e armazena-os 
 em um array do tipo da estrutura abaixo. O programa deve, em seguida, ordenar o vetor 
 em ordem ALFABÉTICA de nome de produto.
 
@@ -17,7 +17,7 @@ em ordem ALFABÉTICA de nome de produto.
 #include <string.h>
 #include <stdlib.h>
 
-# define Produtos_MAX 20 // declara uma constante com o valor 20
+# define Produtos_MAX 10 // declara uma constante com o valor 20
 
 typedef struct {
  char nome[20];
@@ -83,7 +83,7 @@ int main() {
  		
  		printf("Produto %d:\n", i+1);
 
-	
+		
 		//Lê o nome do produto e armazena na característica nome do array produto_max 
 		printf("Nome: ");
 		scanf("%19s", produtos[i].nome); 
@@ -99,6 +99,17 @@ int main() {
  	}
 
 
+	// deixa os produtos em ordem alfabética pelo nome
+	qsort(produtos, Produtos_MAX, sizeof(PROD), compararProdutos);
+	
+	//printa todas o valores do array em ordem alfabética
+	
+	printf("Produtos ordenados:\n");
+	
+	for(i=0;i<Produtos_MAX;i++){
+	
+	printf("%d. Nome: %s, Preco: %.2f\n", i+1, produtos[i].nome,produtos[i].preco);
+}
 	return 0;
 
 }
