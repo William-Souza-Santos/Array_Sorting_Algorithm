@@ -24,3 +24,5 @@ typedef struct {
  float preco;
 } PROD; // Estrutura do enunciado
 
+// Teste verificar compatibilidade
+
