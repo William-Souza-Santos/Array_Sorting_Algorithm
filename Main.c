@@ -4,9 +4,13 @@
                                     ARRAY SORTING ALGORITHM
 
 
-                                    WILLIAM SANTOS 
+                                      WILLIAM SANTOS 
 
 
 ***************************************************************************************************/
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
